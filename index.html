@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR Insight Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand"><span class="logo"></span><div><b>Nosense Studio</b><small>hello@nosensestudio</small></div></div>
+    <div class="search"><span>Search</span><kbd>⌘ K</kbd></div>
+    <nav class="nav">
+      <a href="#" class="on"><i class="ico"></i>Dashboard</a>
+      <a href="#"><i class="ico"></i>Employee Directory</a>
+      <a href="#"><i class="ico"></i>Attendance</a>
+      <a href="#"><i class="ico"></i>Employee Performance</a>
+      <a href="#"><i class="ico"></i>Leave Management</a>
+      <a href="#"><i class="ico"></i>Payroll</a>
+      <a href="#"><i class="ico"></i>Recruitment</a>
+      <a href="#"><i class="ico"></i>Onboarding</a>
+      <a href="#"><i class="ico"></i>Development</a>
+    </nav>
+    <div class="foot">
+      <a href="#"><i class="ico"></i>Help Center</a>
+      <a href="#"><i class="ico"></i>Settings</a>
+      <a href="#" class="out"><i class="ico"></i>Sign Out</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="panel">
+      <header class="topbar">
+        <span>Dashboard / Overview</span>
+        <div class="btns"><button class="btn">+ Invite People</button><button class="btn pri">Generate Plan</button></div>
+      </header>
+
+      <div class="content">
+        <div class="head">
+          <div><h1>HR Insight Dashboard</h1><p>Smart HR insights that drive better decisions</p></div>
+          <div class="btns"><button class="btn">Export Data</button><button class="btn pri">+ New Entry</button></div>
+        </div>
+
+        <section class="stats">
+          <article class="card stat"><div class="top"><span><i class="ico"></i>Total Employee</span><button class="dots" aria-label="More">···</button></div><div class="bot"><strong>272</strong><small><b>+8%</b> last month</small></div></article>
+          <article class="card stat"><div class="top"><span><i class="ico"></i>New Employee</span><button class="dots" aria-label="More">···</button></div><div class="bot"><strong>72</strong><small><b>+6%</b> last month</small></div></article>
+          <article class="card stat"><div class="top"><span><i class="ico"></i>Resign Employee</span><button class="dots" aria-label="More">···</button></div><div class="bot"><strong>16</strong><small><b>-2%</b> last month</small></div></article>
+          <article class="card stat"><div class="top"><span><i class="ico"></i>Job Applicants</span><button class="dots" aria-label="More">···</button></div><div class="bot"><strong>329</strong><small><b>+8%</b> last month</small></div></article>
+        </section>
+
+        <section class="row row-1">
+          <article class="card pad">
+            <div class="ch"><h2>Team Performance</h2><button class="dots" aria-label="More">···</button></div>
+            <div style="display:flex;align-items:center">
+              <div class="legend"><span><i style="background:#8c6fc4"></i>Project Team</span><span><i style="background:var(--orange)"></i>Product Team</span></div>
+              <div class="seg"><button>Monthly</button><button class="on">Yearly</button></div>
+            </div>
+            <div class="chart">
+              <div class="yl"><span>10K</span><span>20K</span><span>30K</span><span>40K</span><span>50K</span></div>
+              <div class="plot">
+                <svg id="perf" viewBox="0 0 600 170" preserveAspectRatio="none" role="img" aria-label="Team performance by month"></svg>
+                <div class="cursor"></div>
+                <div class="tip"><b>Sep, 2025</b>
+                  <div><span><i style="background:#8c6fc4"></i>Project Team</span><b>39k</b></div>
+                  <div><span><i style="background:var(--orange)"></i>Product Team</span><b>24k</b></div>
+                </div>
+                <div class="xl"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card pad">
+            <div class="ch"><h2>Attendance Report</h2><button class="dots" aria-label="More">···</button></div>
+            <div class="heat">
+              <div class="times"><span>11:00</span><span>10:30</span><span>10:00</span><span>09:30</span><span>09:00</span><span>08:30</span></div>
+              <div class="cells">
+                <i></i><i></i><i></i><i></i><i></i>
+                <i class="l1"></i><i class="l1"></i><i class="l1"></i><i class="l1"></i><i class="l1"></i>
+                <i class="l2"></i><i class="l2"></i><i class="l2"></i><i class="l2"></i><i class="l2"></i>
+                <i class="l3"></i><i class="l3"></i><i class="l4"></i><i class="l3"></i><i class="l3"></i>
+                <i class="l4"></i><i class="l5"></i><i class="l4"></i><i class="l4"></i><i class="l5"></i>
+                <i class="l5"></i><i class="l5"></i><i class="l5"></i><i class="l5"></i><i class="l5"></i>
+              </div>
+            </div>
+            <div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+          </article>
+        </section>
+
+        <section class="row row-2">
+          <article class="card pad table">
+            <div class="ch"><h2>Employees</h2><button class="dots" aria-label="More">···</button></div>
+            <table>
+              <thead><tr><th><i class="box"></i></th><th>Employee ID</th><th>Full Name</th><th>Email</th><th>Role</th><th>Department</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><i class="box"></i></td><td>#EMP100</td><td>Cooper Herwitz</td><td>cooper@gmail.com</td><td>Jr. Developer</td><td>IT</td><td class="act">Active</td></tr>
+                <tr><td><i class="box"></i></td><td>#EMP106</td><td>Kierra Gouse</td><td>kierra@gmail.com</td><td>UI Designer</td><td>Creative</td><td class="act">Active</td></tr>
+                <tr><td><i class="box"></i></td><td>#EMP103</td><td>Cheyenne Franci</td><td>cheyennefci@gmail.com</td><td>Development</td><td>HR</td><td class="act">Active</td></tr>
+                <tr><td><i class="box"></i></td><td>#EMP102</td><td>Charlie Saris</td><td>charliesara@gmail.com</td><td>Media Social</td><td>Marketing</td><td class="act">Active</td></tr>
+                <tr><td><i class="box"></i></td><td>#EMP105</td><td>Lindsey Mango</td><td>lindseymango@gmail.com</td><td>Product Designer</td><td>Creative</td><td class="act">Active</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="card pad">
+            <div class="ch"><h2>Jobs Overview</h2><button class="dots" aria-label="More">···</button></div>
+            <div class="gauge">
+              <svg viewBox="0 0 220 118" aria-hidden="true" fill="none" stroke-width="26">
+                <path d="M12 110A98 98 0 0 1 208 110" pathLength="100" stroke="#8c5be8" stroke-dasharray="63 100"/>
+                <path d="M12 110A98 98 0 0 1 208 110" pathLength="100" stroke="#f4a259" stroke-dasharray="25 100" stroke-dashoffset="-64"/>
+                <path d="M12 110A98 98 0 0 1 208 110" pathLength="100" stroke="#5ee08a" stroke-dasharray="11 100" stroke-dashoffset="-89"/>
+              </svg>
+              <div><b>72</b><small>Total Jobs</small></div>
+            </div>
+            <ul class="legend-list">
+              <li><i style="background:#8c5be8"></i><b>46</b><span>Active Jobs</span></li>
+              <li><i style="background:var(--orange)"></i><b>18</b><span>In Reviews Jobs</span></li>
+              <li><i style="background:var(--green)"></i><b>8</b><span>Fresh Jobs</span></li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+/* Draws the Team Performance lines from the two data arrays (values in thousands). */
+(function(){
+  const W=600,H=170,x=i=>i*W/11,y=v=>H-(v-10)/40*H;
+  const project=[28,26,32,30,36,30,38,40,39,36,38,46];
+  const product=[16,13,12,18,26,17,24,16,24,29,21,32];
+  const line=a=>a.map((v,i)=>{const X=x(i),Y=y(v);if(!i)return`M${X} ${Y}`;const m=(x(i-1)+X)/2;return`C${m} ${y(a[i-1])} ${m} ${Y} ${X} ${Y}`}).join(' ');
+  let s='<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8c6fc4" stop-opacity=".14"/><stop offset="1" stop-color="#8c6fc4" stop-opacity="0"/></linearGradient></defs>';
+  for(let v=10;v<=50;v+=10)s+=`<line x1="0" x2="${W}" y1="${y(v)}" y2="${y(v)}" stroke="#eeeef1" vector-effect="non-scaling-stroke"/>`;
+  s+=`<path d="${line(project)} L${W} ${H} L0 ${H}Z" fill="url(#g)"/>`;
+  s+=`<path d="${line(project)}" fill="none" stroke="#8c6fc4" stroke-width="1.6" vector-effect="non-scaling-stroke"/>`;
+  s+=`<path d="${line(product)}" fill="none" stroke="#f4a259" stroke-width="1.6" vector-effect="non-scaling-stroke"/>`;
+  document.getElementById('perf').innerHTML=s;
+})();
+</script>
+</body>
+</html>
